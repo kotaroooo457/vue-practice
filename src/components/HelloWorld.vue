@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <hoge></hoge>
+    <hoge />
+    <peger />
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -33,11 +34,13 @@
 
 <script>
 import Hoge from './HelloChild/Hoge';
+import Peger from './CompositionAPI/Pager';
 
 export default {
   name: 'HelloWorld',
   components: {
-    hoge: Hoge
+    hoge: Hoge,
+    peger: Peger,
   },
   props: {
     msg: String

@@ -1,7 +1,7 @@
 <template>
    <div>
       <h2>{{ hoge }}</h2>
-      <fuga></fuga>
+      <fuga />
    </div>
 </template>
 
