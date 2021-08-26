@@ -12,7 +12,14 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+
+  provide () {
+    return {
+      hoge: 'hogehoge',
+      fuga: 'fugafuga',
+    }
+  },
 }
 </script>
 
