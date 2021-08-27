@@ -29,25 +29,18 @@
 
             // methods
             const prevPage = () => {
-
                 return pagination.page--;
-
             };
             const nextPage = () => {
-
                 return pagination.page++;
-
             };
             const getPosts = () => {
 
                 fetch('https://jsonplaceholder.typicode.com/posts')
                     .then(response => response.json())
                     .then(data => {
-
                         posts.value = data;
-
                     });
-
             };
 
             // computed
@@ -58,31 +51,22 @@
                 const end = start + pagination.limit;
 
                 for(let i = start ; i < end ; i++) {
-
                     if(posts.value[i] !== undefined) {
-
                         filteredPosts.push(posts.value[i])
-
                     }
-
                 }
-
                 return filteredPosts;
 
             });
 
             // watch
             watch(posts, () => {
-
                 console.log('postsが変更されました');
-
             });
 
             // mounted
             onMounted(() => {
-
                 getPosts();
-
             });
 
             return {
@@ -92,7 +76,6 @@
                 nextPage,
                 filteredPosts
             }
-
         }
     }
 
